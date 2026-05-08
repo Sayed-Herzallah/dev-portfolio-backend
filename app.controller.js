@@ -12,8 +12,7 @@ export const bootstrap = async (app, express) => {
   // ================= CORS ===================
   app.use(
     cors({
-      origin: process.env.FRONTEND_URL || "*",
-      methods: ["GET", "POST", "PATCH", "DELETE"],
+      origin: "*"
     })
   );
 
