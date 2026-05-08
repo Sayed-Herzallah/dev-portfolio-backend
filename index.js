@@ -28,24 +28,32 @@
 import express from "express";
 import { bootstrap } from "../app.controller.js";
 
-let app; // cache app instance (important for serverless)
+let app;
+
+const createApp = async () => {
+  const expressApp = express();
+
+  expressApp.use(express.json());
+
+  // health check (مهم جدًا للتأكد إن السيرفر شغال)
+  expressApp.get("/", (req, res) => {
+    res.json({ message: "API is running 🚀" });
+  });
+
+  await bootstrap(expressApp, express);
+
+  return expressApp;
+};
 
 export default async function handler(req, res) {
   try {
-    // create app once per cold start
     if (!app) {
-      app = express();
-
-      app.use(express.json());
-
-      // مهم جدًا: bootstrap لازم يكون safe للserverless
-      await bootstrap(app, express);
+      app = await createApp();
     }
 
-    // تمرير request لـ Express
     return app(req, res);
   } catch (error) {
-    console.error("Serverless Error:", error);
+    console.error("❌ Serverless Error:", error);
 
     return res.status(500).json({
       message: "Internal Server Error",
