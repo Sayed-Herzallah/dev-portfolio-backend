@@ -26,7 +26,7 @@
 
 
 import express from "express";
-import { bootstrap } from "../app.controller.js";
+import { bootstrap } from "./app.controller.js";
 
 let app;
 
