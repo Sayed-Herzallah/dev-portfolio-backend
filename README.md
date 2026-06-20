@@ -1,12 +1,11 @@
-# 💻 Developer Portfolio Backend
+# 💻 Developer Portfolio Backend API
 
-A Node.js & Express.js backend system designed for developer portfolios, providing secure contact form handling and API endpoints.
+A Node.js & Express.js server backend designed to power developer portfolios, managing contact form emails and API endpoints.
 
 ---
 
-## 📌 Overview
-
-**dev-portfolio-backend** serves as the API backend for developer portfolio sites. It includes routing and configuration for sending emails directly from contact forms, listing completed projects, and rendering resume data. The service is optimized for serverless hosting on **Vercel**.
+## 📌 System Overview
+This backend provides secure endpoints for developer portfolio sites. It handles contact forms, integrates with email transport systems, serves projects list data, and supports serverless hosting setups like Vercel.
 
 ---
 
@@ -15,41 +14,56 @@ A Node.js & Express.js backend system designed for developer portfolios, providi
 | Technology | Purpose |
 | ---------- | ------- |
 | Node.js    | JS Runtime environment |
-| Express.js | Backend API routing |
-| Nodemailer | Email transport service |
-| Cors       | Cross-Origin resource sharing |
-| Vercel     | Serverless deployment configuration |
+| Express.js | Backend API router and middleware server |
+| Nodemailer | Secure email dispatch service |
+| Cors       | Cross-Origin resource sharing control |
+| Vercel     | Serverless deployment routing configurations |
 
 ---
 
-## 🚀 Key Features
-
-* ✉️ **Contact Form API:** Secure endpoint to forward user queries via email.
-* 🛡️ **CORS Configuration:** Controlled access parameters protecting endpoint usage.
-* ☁️ **Vercel Deploy Ready:** Simple configuration using `vercel.json` settings.
-* 📑 **Clean Architecture:** Separated controllers and modules for easy extension.
+## 🚀 Core Features
+* ✉️ **Secure Mail System:** Forwards submissions from the contact form directly to your email inbox.
+* 🛡️ **CORS Protection:** Limits client-side access to authorized domains only.
+* ☁️ **Vercel Deployable:** Includes a preconfigured `vercel.json` for serverless function mappings.
+* 📂 **Modular Structure:** Keeps controllers separate from route definitions for clean extension.
 
 ---
 
-## 🏗️ Project Structure
-
+## 🏗️ Directory Structure
 ```
-├── src/                 # Main source directory
-├── app.controller.js    # Controller handling route functions
-├── index.js             # Server initialization script
-├── vercel.json          # Deployment routing specifications
-└── package.json         # Package dependencies and startup commands
+├── src/                 # Primary source code
+│   └── routes/          # API route definitions
+├── app.controller.js    # Route business logic handlers
+├── index.js             # Server initialization entrypoint
+├── vercel.json          # Vercel serverless configurations
+├── package.json         # Project manifests and dependencies
+└── .gitignore           # Ignored system folders and keys
 ```
 
 ---
 
-## 👨&zwj;💻 Author
+## ⚙️ Setup & Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Sayed-Herzallah/dev-portfolio-backend.git
+   ```
+2. Install npm dependencies:
+   ```bash
+   npm install
+   ```
+3. Configure environment variables (create `.env` file):
+   ```env
+   PORT=5000
+   EMAIL_USER=your_email@gmail.com
+   EMAIL_PASS=your_email_password
+   ```
+4. Run server locally:
+   ```bash
+   npm run dev
+   ```
 
+---
+
+## 👨‍💻 Author
 **Sayed Herzallah**  
-Backend Developer — Node.js | Express
-
----
-
-## ⭐ Support
-
-If you find this project useful, consider giving it a star on GitHub.
+Full Stack Developer
