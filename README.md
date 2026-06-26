@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  ![Node.js](https://img.shields.io/badge/Node.js-v18-green?logo=nodedotjs&style=for-the-badge) ![Express.js](https://img.shields.io/badge/Express.js-v4-black?logo=express&style=for-the-badge) ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+  <img src="https://img.shields.io/badge/Node.js-v18-green?logo=nodedotjs&style=for-the-badge" alt="Node.js" /> <img src="https://img.shields.io/badge/Express.js-v4-black?logo=express&style=for-the-badge" alt="Express.js" /> <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License" />
 </div>
 
 ---
